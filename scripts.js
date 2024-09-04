@@ -7,7 +7,12 @@ document.querySelectorAll("nav ul li a").forEach((anchor) => {
     });
   });
 });
+const mobileMenu = document.getElementById("mobile-menu");
+const navMenu = document.getElementById("nav-menu");
 
+mobileMenu.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
 // Form submission handling
 const form = document.querySelector("form");
 form.addEventListener("submit", async (event) => {
