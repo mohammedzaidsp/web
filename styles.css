@@ -6,7 +6,26 @@ body {
   background-color: #1a1a1a;
   color: #e0e0e0;
   scroll-behavior: smooth; /* Smooth scroll for anchor links */
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1001;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
 }
 
 /* Navbar Styles */
@@ -17,9 +36,12 @@ nav {
   height: 60px; /* Set the height of the navbar */
   background: #333;
   color: #fff;
-  padding: 15px 0;
-  text-align: center;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between brand and menu */
   z-index: 1000;
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 nav ul {
@@ -27,13 +49,12 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 100%; /* Ensure nav items are vertically centered */
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 nav ul li a {
@@ -42,16 +63,53 @@ nav ul li a {
   font-weight: bold;
 }
 
+/* Responsive Styles for Overflow Prevention */
+h1,
+h2,
+h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%; /* Ensure headers do not exceed container width */
+}
+
+p {
+  max-width: 100%; /* Make sure paragraphs do not overflow container */
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.cta {
+  padding: 10px 20px;
+  background-color: #ff8c42;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.cta:hover {
+  background-color: #e07a2d;
+}
+
 /* Section Styles */
 section {
-  height: 100vh; /* Full viewport height */
+  height: auto; /* Allows sections to expand based on content */
+  padding: 80px 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Align content vertically */
   align-items: center;
-  padding: 50px 20px;
-  opacity: 0;
-  transform: translateY(20px); /* Slight offset for animation */
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  text-align: center;
+  overflow-wrap: break-word; /* Ensures text wraps within container */
+  word-break: break-word;
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
 .section-visible {
@@ -81,6 +139,55 @@ section {
 
 #contact {
   background-color: #1a1a1a; /* Black */
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#contact h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+#contact form {
+  width: 100%;
+  max-width: 600px; /* Center form and restrict its width */
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#contact form button {
+  background-color: #ff8c42;
+  color: #1a1a1a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact form button:hover {
+  background-color: #e07a2d;
 }
 
 /* Footer Styles */
@@ -100,6 +207,7 @@ form {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  box-sizing: border-box; /* Ensure padding is accounted for */
 }
 
 section h2 {
@@ -110,10 +218,11 @@ section h2 {
 
 .portfolio-grid,
 .services-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  width: 100%; /* Ensures grid container scales with the screen */
+  box-sizing: border-box;
 }
 
 .portfolio-item,
@@ -122,19 +231,40 @@ section h2 {
   padding: 20px;
   border-radius: 8px;
   color: #e0e0e0;
-  flex: 1 1 calc(33% - 20px);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.portfolio-item h3,
-.service-item h3 {
-  margin-top: 0;
-  color: #ecf0f1;
-}
-
+/* Responsive Styles for Smaller Screens */
 @media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
   nav ul {
     flex-direction: column;
-    gap: 10px;
+    display: none;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+    max-height: 100vh; /* Allow the menu to expand to full height */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  #nav-menu.show {
+    display: flex;
+    flex-direction: column;
   }
 
   .portfolio-item,
@@ -147,7 +277,12 @@ section h2 {
   }
 }
 
+/* Further Adjustments for Very Small Screens */
 @media screen and (max-width: 480px) {
+  nav {
+    padding: 0 10px;
+  }
+
   .hero-content h1 {
     font-size: 2em;
   }
@@ -158,6 +293,16 @@ section h2 {
 
   h2 {
     font-size: 2em;
+  }
+
+  .portfolio-item,
+  .service-item {
+    padding: 10px;
+  }
+
+  .cta {
+    font-size: 0.9em;
+    padding: 8px 16px;
   }
 }
 html {
