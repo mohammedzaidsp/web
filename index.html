@@ -13,7 +13,12 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul id="nav-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
@@ -135,7 +140,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init({
-        duration: 1200, 
+        duration: 1200,
         once: true, // Whether animation should happen only once
         easing: "ease-in-out", // Easing function
       });
