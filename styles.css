@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  scroll-behavior: smooth; /* Smooth scroll for anchor links */
+  overflow-x: hidden;
+}
+
+/* Navbar Styles */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; /* Set the height of the navbar */
+  background: #333;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure nav items are vertically centered */
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Section Styles */
+section {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  opacity: 0;
+  transform: translateY(20px); /* Slight offset for animation */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#home {
+  background-color: #ff8c42; /* Warm orange */
+  opacity: 1;
+  transform: translateY(0);
+  transition: none; /* No transition delay on the hero section */
+}
+
+#about {
+  background-color: #282828; /* Dark gray */
+}
+
+#portfolio {
+  background-color: #f4f4f4; /* Light gray */
+  color: #1a1a1a;
+}
+
+#services {
+  background-color: #333333; /* Darker gray */
+}
+
+#contact {
+  background-color: #1a1a1a; /* Black */
+}
+
+/* Footer Styles */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Adjusting AOS Animation and Alignment */
+.hero-content,
+section h2,
+.portfolio-grid,
+.services-list,
+form {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.portfolio-grid,
+.services-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.portfolio-item,
+.service-item {
+  background: #2e2e2e;
+  padding: 20px;
+  border-radius: 8px;
+  color: #e0e0e0;
+  flex: 1 1 calc(33% - 20px);
+}
+
+.portfolio-item h3,
+.service-item h3 {
+  margin-top: 0;
+  color: #ecf0f1;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .portfolio-item,
+  .service-item {
+    flex: 1 1 calc(100% - 20px);
+  }
+
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .hero-content p {
+    font-size: 0.9em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
