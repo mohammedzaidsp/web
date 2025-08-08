@@ -1,124 +1,148 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Initialize Locomotive Scroll
-  const scroll = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true,
-    lerp: 0.05, // Reduced for faster scrolling
-    multiplier: 1, // Increased for faster scrolling
-  });
 
-  // Update LocomotiveScroll on window resize
-  scroll.on("scroll", ScrollTrigger.update);
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
-  // ScrollTrigger scrollerProxy
-  ScrollTrigger.scrollerProxy("[data-scroll-container]", {
-    scrollTop(value) {
-      return arguments.length
-        ? scroll.scrollTo(value, 0, 0)
-        : scroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    },
-    pinType: document.querySelector("[data-scroll-container]").style.transform
-      ? "transform"
-      : "fixed",
-  });
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  // Apply GSAP animation to each section's content div
-  document.querySelectorAll(".section .content").forEach((content) => {
-    gsap.fromTo(
-      content,
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: content,
-          scroller: "[data-scroll-container]",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  });
-
-  // Refresh Locomotive Scroll and ScrollTrigger on window resize
-  ScrollTrigger.addEventListener("refresh", () => scroll.update());
-  ScrollTrigger.refresh();
-
-  // Sticky Navbar
-  const header = document.querySelector(".header");
-  const headerHeight = header.offsetHeight;
-
-  function updateNavbar() {
-    if (window.pageYOffset > headerHeight) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  }
-
-  window.addEventListener("scroll", updateNavbar);
-  updateNavbar(); // Call once to set initial state
-
-  // Hamburger Menu Functionality
-  const hamburger = document.querySelector(".hamburger");
-  const navbar = document.querySelector(".navbar");
-  const navLinks = document.querySelectorAll(".navbar ul li a");
-
-  hamburger.addEventListener("click", () => {
-    navbar.classList.toggle("active");
-    hamburger.classList.toggle("active");
-  });
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      navbar.classList.remove("active");
-      hamburger.classList.remove("active");
-    });
-  });
-  // Contact Form
-  document
-    .getElementById("contactForm")
-    .addEventListener("submit", async function (e) {
-      e.preventDefault();
-
-      const form = e.target;
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch("https://formspree.io/f/mrbzkryj", {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-          },
-          body: formData,
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
 
-        const result = await response.json();
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
 
-        if (response.ok) {
-          document.getElementById("responseMessage").innerHTML =
-            "<p>Message sent successfully!</p>";
-          form.reset(); // Clear form after submission
-        } else {
-          throw new Error(result.error || "Something went wrong");
+            // Update active nav link
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Hero title animation fix
+        document.querySelectorAll('.hero-content > *').forEach((el, index) => {
+            el.style.transform = 'translateY(30px)';
+        });
+
+        // Mobile menu functionality
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Add mobile menu styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @media (max-width: 768px) {
+                .nav-menu {
+                    position: fixed;
+                    top: 70px;
+                    left: -100%;
+                    width: 100%;
+                    height: calc(100vh - 70px);
+                    background: rgba(15, 23, 42, 0.98);
+                    backdrop-filter: blur(20px);
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding-top: 2rem;
+                    transition: left 0.3s ease;
+                    gap: 2rem;
+                }
+
+                .nav-menu.active {
+                    left: 0;
+                }
+
+                .mobile-menu.active span:nth-child(1) {
+                    transform: rotate(-45deg) translate(-5px, 6px);
+                }
+
+                .mobile-menu.active span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                .mobile-menu.active span:nth-child(3) {
+                    transform: rotate(45deg) translate(-5px, -6px);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Add typing effect to hero title
+        const heroTitle = document.querySelector('.hero-title');
+        const text = heroTitle.textContent;
+        heroTitle.textContent = '';
+        heroTitle.style.borderRight = '3px solid var(--accent)';
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                heroTitle.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            } else {
+                setTimeout(() => {
+                    heroTitle.style.borderRight = 'none';
+                }, 1000);
+            }
         }
-      } catch (error) {
-        document.getElementById(
-          "responseMessage"
-        ).innerHTML = `<p>Error: ${error.message}</p>`;
-      }
-    });
-});
+        
+        // Start typing effect after page load
+        setTimeout(typeWriter, 1000);
+    

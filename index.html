@@ -1,441 +1,528 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Freelance Developer Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
-  </head>
-  <body data-scroll-container>
-    <header class="header">
-      <div class="brand">My Portfolio</div>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-      <nav class="navbar" id="navbar">
-        <ul>
-          <li><a href="#home" data-scroll-to>Home</a></li>
-          <li><a href="#about" data-scroll-to>About</a></li>
-          <li><a href="#portfolio" data-scroll-to>Portfolio</a></li>
-          <li><a href="#services" data-scroll-to>Services</a></li>
-          <li><a href="#certification" data-scroll-to>Certification</a></li>
-          <li><a href="#contact" data-scroll-to>Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Zaid SP - Website Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+</head>
 
-    <main data-scroll-container>
-      <!-- Home Section -->
-      <section id="home" class="section home">
-        <div class="content">
-          <div class="hero-content">
-            <h1>Your Freelance Dev – Mohammed Zaid</h1>
-            <p>
-              Elevate your business with innovative, tailor-made software
-              solutions. Let's turn your vision into reality and unlock
-              limitless possibilities in the digital world.
+<body>
+    <div class="bg-animation"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">MZ</a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-subtitle">Freelance Developer</div>
+            <h1 class="hero-title">Mohammed Zaid SP</h1>
+            <p class="hero-description">
+                Experienced software developer with 5+ years in Android app development, 
+                desktop software, website development and database management.
             </p>
-            <a href="#portfolio" class="cta" data-scroll-to>View My Work</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="section about">
-        <div class="content">
-          <h2 class="section-head">About Me</h2>
-          <div class="about-content">
-            <div class="about-text">
-              <p>
-                A passionate and dedicated freelance software developer with
-                over 5 years of experience in creating innovative solutions that
-                solve real-world problems. My expertise spans across multiple
-                platforms, delivering both functional and aesthetically pleasing
-                digital products.
-              </p>
-              <h3>Why Choose Me?</h3>
-              <ul>
-                <li>
-                  <strong>Uncompromising Quality:</strong> I take pride in
-                  delivering solutions that are robust, efficient, and stand the
-                  test of time.
-                </li>
-                <li>
-                  <strong>Precision & Attention to Detail:</strong> From the
-                  smallest component to the overall architecture, every aspect
-                  is meticulously crafted to meet the highest standards.
-                </li>
-                <li>
-                  <strong>Your Vision, My Mission:</strong> I go beyond
-                  understanding your needs— I am committed to bringing your
-                  ideas to life, ensuring they align with your goals and exceed
-                  expectations.
-                </li>
-              </ul>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-code"></i> View My Work
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
             </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section animate-on-scroll">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">
+            Passionate about creating innovative software solutions that solve real-world problems
+        </p>
+        
+        <div class="about-grid">
             <div class="about-image">
-              <img src="./Images/zaid010.jpg" alt="Mohammed Zaid" />
+                <img src="zaid010.jpg" alt="Mohammed Zaid SP">
             </div>
-          </div>
+            <div class="about-content">
+                <h3>Experienced Software Developer</h3>
+                <p>
+                    With over 5+ years of experience in software development, I specialize in Android app development, 
+                    desktop software, website development, and database management. I have a proven ability to deliver 
+                    high-quality projects on time and within budget, with strong skills in remote work, project management, 
+                    and client communication.
+                </p>
+                <p>
+                    My educational background includes Computer Science from Islamiah Boy's Higher Secondary School, 
+                    and I've continuously enhanced my skills through various certifications and hands-on experience 
+                    across diverse technology stacks.
+                </p>
+            </div>
         </div>
-      </section>
 
-      <!-- Portfolio Section -->
-      <section id="portfolio" class="section portfolio">
-        <div class="content">
-          <h2 class="section-head">Portfolio</h2>
-          <div class="portfolio-grid">
-            <div class="portfolio-item" data-animation="animate-right">
-              <h3>Impotex</h3>
-              <p>
-                Developed a full-featured e-commerce application, offering a
-                seamless shopping experience from browsing to checkout.
-              </p>
-              <p>Features</p>
-              <ul>
-                <li>Quick and secure login & registration for users</li>
-                <li>Intuitive and easy-to-navigate menu structure</li>
-                <li>
-                  Advanced product filtering and sorting to enhance the shopping
-                  experience
-                </li>
-                <li>
-                  Comprehensive product descriptions with images and details
-                </li>
-                <li>Integrated shopping cart with real-time price updates</li>
-                <li>Wishlist functionality for saving favorite items</li>
-                <li>
-                  Secure payment gateway supporting multiple payment options
-                </li>
-                <li>
-                  Product reviews and scoring system for informed purchases
-                </li>
-                <li>Clear and concise order summaries at checkout</li>
-                <li>Real-time shipping status updates for transparency</li>
-                <li>Easy returns management and status tracking</li>
-                <li>
-                  And more features designed to improve the e-commerce
-                  experience
-                </li>
-              </ul>
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Years Experience</span>
             </div>
-
-            <div class="portfolio-item" data-animation="animate-left">
-              <h3>Sales Pro</h3>
-              <p>
-                Designed and implemented a POS billing system for Android and
-                desktop, tailored for retail environments.
-              </p>
-              <p>Features</p>
-              <ul>
-                <li>Seamless user login and registration for quick access</li>
-                <li>Customizable navigation menu for easy product browsing</li>
-                <li>
-                  Efficient product filtering and sorting for faster billing
-                </li>
-                <li>Detailed product descriptions for easy reference</li>
-                <li>
-                  Integrated shopping cart for streamlined checkout processes
-                </li>
-                <li>
-                  Wishlist functionality for marking frequently purchased items
-                </li>
-                <li>Integrated payment gateway for secure transactions</li>
-                <li>
-                  Product review and rating feature to enhance customer
-                  decision-making
-                </li>
-                <li>Comprehensive order summary for transparency in billing</li>
-                <li>Real-time inventory and order tracking</li>
-                <li>Return status tracking for better customer service</li>
-                <li>And additional features to optimize retail management</li>
-              </ul>
+            <div class="stat-card">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Projects Completed</span>
             </div>
-
-            <div class="portfolio-item" data-animation="animate-right">
-              <h3>Naseer Leather</h3>
-              <p>
-                Created a customizable ERP system for a multi-branch leather
-                design company, focusing on streamlining operations and
-                improving efficiency.
-              </p>
-              <p>Features</p>
-              <ul>
-                <li>Custom login & registration based on company roles</li>
-                <li>Navigation menu tailored for different departments</li>
-                <li>
-                  User-friendly product filtering and sorting for better data
-                  management
-                </li>
-                <li>
-                  Comprehensive product information with customizable options
-                </li>
-                <li>
-                  Order processing and tracking integrated within the ERP system
-                </li>
-                <li>
-                  Wishlist and order history features for better inventory
-                  management
-                </li>
-                <li>Payment gateway integration for seamless invoicing</li>
-                <li>Real-time reviews and feedback tracking</li>
-                <li>
-                  Detailed order summaries for better reporting and analytics
-                </li>
-                <li>Shipping status and logistics management</li>
-                <li>Returns management integrated into the ERP system</li>
-                <li>
-                  Additional modules for inventory, accounting, and HR
-                  functionalities
-                </li>
-              </ul>
+            <div class="stat-card">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Certifications</span>
             </div>
-
-            <div class="portfolio-item" data-animation="animate-left">
-              <h3>Expense Calculator</h3>
-              <p>
-                A versatile tool for tracking and calculating personal or
-                business expenses, making budgeting simple.
-              </p>
-              <p>Features</p>
-              <ul>
-                <li>Simple and secure login & registration process</li>
-                <li>
-                  Easy-to-navigate interface with customizable expense
-                  categories
-                </li>
-                <li>Filters and sorting to quickly find specific expenses</li>
-                <li>
-                  Detailed descriptions for each expense with editable fields
-                </li>
-                <li>Integrated calculators for quick budget management</li>
-                <li>Wishlist feature for planned future expenses</li>
-                <li>Payment gateway integration for settling bills directly</li>
-                <li>Review and score system for recurring expenses</li>
-                <li>Comprehensive order or expense summary</li>
-                <li>Expense tracking and history with real-time updates</li>
-                <li>
-                  Return and refund management for business expense claims
-                </li>
-                <li>
-                  Additional tools for financial planning and savings tracking
-                </li>
-              </ul>
+            <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Client Satisfaction</span>
             </div>
-
-            <div class="portfolio-item" data-animation="animate-right">
-              <h3>Lead Software Engineer</h3>
-              <p>
-                Served as Lead Software Engineer for two years at Maimsd
-                Technology, overseeing development teams and driving software
-                innovation.
-              </p>
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <!-- Services Section -->
-      <section id="services" class="section services">
-        <div class="content">
-          <h2 class="section-head">Services</h2>
-          <div class="services-list">
-            <div class="service-item" data-animation="animate-up">
-              <h3>Android App Development</h3>
-              <p>
-                Specializing in designing intuitive, user-friendly mobile apps
-                that focus on excellent user experience and modern technologies.
-                Whether it's creating sleek interfaces or incorporating
-                interactive features, the goal is to deliver apps that not only
-                perform flawlessly but also engage and satisfy users. With a
-                blend of innovation and creativity, ensuring the app stands out
-                in a competitive market.
-              </p>
-            </div>
-            <div class="service-item" data-animation="animate-up">
-              <h3>Desktop Software Development</h3>
-              <p>
-                Offering customized desktop software solutions that address
-                unique business challenges and objectives. Enhancing
-                productivity and streamlining operations, bespoke systems are
-                scalable and adaptable, seamlessly integrating with existing
-                infrastructure to drive growth and efficiency. Ready to build a
-                system that propels businesses forward.
-              </p>
-            </div>
-            <div class="service-item" data-animation="animate-up">
-              <h3>Web Development</h3>
-              <p>
-                Creating responsive, fast-loading, and visually appealing
-                websites that adapt perfectly to any device. From simple landing
-                pages to complex web platforms, ensuring an online presence is
-                strong, engaging, and easy to navigate.
-              </p>
-            </div>
-            <div class="service-item" data-animation="animate-up">
-              <h3>Digital Marketing</h3>
-              <p>
-                Boosting online visibility and reaching target audiences with
-                comprehensive digital marketing strategies. Combining SEO,
-                social media, and targeted advertising to grow brands and drive
-                measurable results.
-              </p>
-            </div>
-            <a href="#contact" class="cta2" data-scroll-to>Hire Me</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Certification Section -->
-      <section id="certification" class="section certification">
-        <div class="content">
-          <h2 class="section-head">Certifications</h2>
-          <p>
-            I am dedicated to fostering continuous growth and professional
-            development, constantly seeking opportunities to expand my skills
-            and stay at the forefront of industry advancements.
-          </p>
-          <div class="certification-grid">
-            <div class="certification-item" data-animation="animate-left">
-              <img
-                src="Images/Mastering the fundamentals of java.png"
-                alt="Mastering the Fundamentals of Java"
-              />
-              <p>Mastering the Fundamentals of Java</p>
-            </div>
-            <div class="certification-item" data-animation="animate-right">
-              <img src="Images/Oops in Java Scaler.png" alt="OOPs in Java" />
-              <p>OOPs in Java</p>
-            </div>
-            <div class="certification-item" data-animation="animate-left">
-              <img src="Images/React JS.png" alt="React JS" />
-              <p>React JS</p>
-            </div>
-            <div class="certification-item" data-animation="animate-left">
-              <img src="Images/LLD.png" alt="Low Level Design" />
-              <p>Low Level Design</p>
-            </div>
-
-            <div class="certification-item" data-animation="animate-left">
-              <img src="Images/img1.png" alt="Foundational c# with Microsoft" />
-              <p>Foundational c# with Microsoft</p>
-            </div>
-            <div class="certification-item" data-animation="animate-left">
-              <img
-                src="Images/Machine Coding Tic Tac Toe -LLD Case Study.png"
-                alt="Machine Coding Tic Tac Toe"
-              />
-              <p>Machine Coding Tic Tac Toe</p>
-            </div>
-            <div class="certification-item" data-animation="animate-left">
-              <img src="Images/Solid Principle.png" alt="Solid Principle" />
-              <p>Solid Principle</p>
-            </div>
-            <div class="certification-item" data-animation="animate-left">
-              <img
-                src="Images/Streams and Lambdas.png"
-                alt="Streams and Lambdas"
-              />
-              <p>Streams and Lambdas</p>
-            </div>
-            <div class="certification-item" data-animation="animate-left">
-              <img
-                src="Images/Master Backtracking For SDEs.png"
-                alt="Master Backtracking For SDEs"
-              />
-              <p>Master Backtracking For SDEs</p>
-            </div>
-          </div>
-          <p>
-            To view more certifications visit my LinkedIn.<a
-              href="https://www.linkedin.com/in/mohammedzaidsp"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </p>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="section contact">
-        <div class="content">
-          <h2 class="section-head">Get in Touch</h2>
-          <p>Let's discuss your project requirements.</p>
-          <div class="contact-container">
-            <div class="contact-form">
-              <form id="contactForm">
-                <div class="form-group">
-                  <input type="text" name="name" placeholder="Name" required />
+    <!-- Skills Section -->
+    <section id="skills" class="section animate-on-scroll">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">
+            Comprehensive expertise across multiple technology stacks and development platforms
+        </p>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">T-SQL</span>
                 </div>
-                <div class="form-group">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Mobile Number"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <textarea
-                    name="message"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-              </form>
-              <div id="responseMessage"></div>
             </div>
-            <div class="contact-info">
-              <h3>Contact me or follow me on social media</h3>
-              <div class="social-icons">
-                <a href="https://wa.me/917397702121" target="_blank"
-                  ><i class="fab fa-whatsapp"></i
-                ></a>
-                <a href="mailto:zaidmohammed35@gmail.com" target="_blank"
-                  ><i class="far fa-envelope"></i
-                ></a>
-                <a
-                  href="https://www.linkedin.com/in/mohammedzaidsp"
-                  target="_blank"
-                  ><i class="fab fa-linkedin"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/mohammedzaidsp"
-                  target="_blank"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a href="https://github.com/mohammedzaidsp" target="_blank"
-                  ><i class="fab fa-github"></i
-                ></a>
-              </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Frameworks & Tools</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Android Studio</span>
+                    <span class="skill-tag">Visual Studio</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">WPF</span>
+                    <span class="skill-tag">.NET</span>
+                    <span class="skill-tag">Visual Studio Code</span>
+                </div>
             </div>
-          </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-globe"></i> Web Technologies</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">React JS</span>
+                    <span class="skill-tag">Web Scraping</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-laptop"></i> Software & Platforms</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Adobe Premiere Pro</span>
+                    <span class="skill-tag">Canva</span>
+                    <span class="skill-tag">Adobe Photoshop</span>
+                    <span class="skill-tag">Unreal Engine</span>
+                    <span class="skill-tag">Blender</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-project-diagram"></i> Project Types</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">E-Commerce</span>
+                    <span class="skill-tag">POS Billing Systems</span>
+                    <span class="skill-tag">Restaurant Ordering</span>
+                    <span class="skill-tag">ERP Systems</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-language"></i> Languages</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">English</span>
+                    <span class="skill-tag">Tamil</span>
+                    <span class="skill-tag">Urdu</span>
+                    <span class="skill-tag">Hindi</span>
+                </div>
+            </div>
         </div>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2024 Mohammed Zaid | Freelance Software Developer</p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section animate-on-scroll">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">
+            Professional journey showcasing growth and diverse project experience
+        </p>
+        
+        <div class="experience-timeline">
+            <div class="experience-item">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Software Development Engineer (SDE)</div>
+                            <div class="experience-company">Maimsd Technology</div>
+                        </div>
+                        <div class="experience-period">2022 - 2024</div>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Developed and maintained software applications in Java and C#</li>
+                            <li>Worked on database management using T-SQL and SQL</li>
+                            <li>Collaborated with cross-functional teams to deliver high-quality software solutions</li>
+                            <li>Improved software performance and user experience through rigorous testing and debugging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Freelance Developer</div>
+                            <div class="experience-company">Self-Employed</div>
+                        </div>
+                        <div class="experience-period">2018 - Present</div>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Developed and delivered websites, Android apps, desktop software, and 3D models</li>
+                            <li>Managed databases and performed photo and video editing</li>
+                            <li>Successfully completed diverse projects on time and within budget</li>
+                            <li>Demonstrated strong project management and remote work capabilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section animate-on-scroll">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+            A showcase of innovative solutions across different domains and technologies
+        </p>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Impotex E-Commerce Platform</h3>
+                    <p class="project-description">
+                        Full-featured e-commerce application offering seamless shopping experience from browsing to checkout. 
+                        Features secure authentication, advanced filtering, integrated payment gateway, and comprehensive order management.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">E-Commerce</span>
+                        <span class="project-tag">Payment Gateway</span>
+                        <span class="project-tag">User Authentication</span>
+                        <span class="project-tag">Order Management</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Sales Pro POS System</h3>
+                    <p class="project-description">
+                        Android and desktop POS billing system tailored for retail environments. 
+                        Includes inventory management, real-time tracking, and streamlined checkout processes.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">POS System</span>
+                        <span class="project-tag">Android</span>
+                        <span class="project-tag">Desktop</span>
+                        <span class="project-tag">Inventory</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Naseer Leather ERP</h3>
+                    <p class="project-description">
+                        Customizable ERP system for multi-branch leather design company. 
+                        Streamlines operations with role-based access, department management, and comprehensive reporting.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">ERP System</span>
+                        <span class="project-tag">Multi-branch</span>
+                        <span class="project-tag">Role-based Access</span>
+                        <span class="project-tag">Reporting</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Expense Calculator</h3>
+                    <p class="project-description">
+                        Versatile expense tracking and budgeting tool for personal and business use. 
+                        Features categorization, financial planning tools, and comprehensive expense analytics.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Finance</span>
+                        <span class="project-tag">Budget Management</span>
+                        <span class="project-tag">Analytics</span>
+                        <span class="project-tag">Personal Finance</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Restaurant Ordering System</h3>
+                    <p class="project-description">
+                        Digital ordering platform for restaurants with menu management, 
+                        order processing, and customer relationship management features.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Restaurant</span>
+                        <span class="project-tag">Order Management</span>
+                        <span class="project-tag">Menu System</span>
+                        <span class="project-tag">CRM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">3D Modeling & Design</h3>
+                    <p class="project-description">
+                        Custom 3D models and designs created using Blender and Unreal Engine. 
+                        Specialized in architectural visualization and product design.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">3D Modeling</span>
+                        <span class="project-tag">Blender</span>
+                        <span class="project-tag">Unreal Engine</span>
+                        <span class="project-tag">Visualization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section animate-on-scroll">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">
+            Continuous learning and professional development across various technologies
+        </p>
+        
+        <div class="certifications-grid">
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fab fa-microsoft"></i>
+                </div>
+                <div class="certification-content">
+                    <h4>Foundational C# with Microsoft</h4>
+                    <p class="certification-provider">Microsoft</p>
+                </div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fab fa-java"></i>
+                </div>
+                <div class="certification-content">
+                    <h4>Mastering the Fundamentals of Java</h4>
+                    <p class="certification-provider">Scaler Academy</p>
+                </div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fab fa-java"></i>
+                </div>
+                <div class="certification-content">
+                    <h4>Object-Oriented Programming in Java</h4>
+                    <p class="certification-provider">Scaler Academy</p>
+                </div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fab fa-android"></i>
+                </div>
+                <div class="certification-content">
+                    <h4>Android Application Development</h4>
+                    <p class="certification-provider">Professional Course</p>
+                </div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="certification-content">
+                    <h4>React JS Development</h4>
+                    <p class="certification-provider">Web Development Course</p>
+                </div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="certification-content">
+                    <h4>Machine Coding Tic Tac Toe - LLD</h4>
+                    <p class="certification-provider">Low Level Design</p>
+                </div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <div class="certification-content">
+                    <h4>SOLID Principles</h4>
+                    <p class="certification-provider">Software Design</p>
+                </div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fab fa-java"></i>
+                </div>
+                <div class="certification-content">
+                    <h4>Streams & Lambdas - Java</h4>
+                    <p class="certification-provider">Advanced Java</p>
+                </div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fas fa-route"></i>
+                </div>
+                <div class="certification-content">
+                    <h4>Master Backtracking For SDEs</h4>
+                    <p class="certification-provider">Algorithm Mastery</p>
+                </div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="certification-content">
+                    <h4>Web Scraping with Python</h4>
+                    <p class="certification-provider">Data Extraction</p>
+                </div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="certification-content">
+                    <h4>Flutter for Beginners</h4>
+                    <p class="certification-provider">Cross-platform Development</p>
+                </div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <div class="certification-content">
+                    <h4>Introduction to Spring Cloud</h4>
+                    <p class="certification-provider">Microservices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section animate-on-scroll">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">
+            Ready to collaborate on your next project? Let's connect and discuss your requirements
+        </p>
+        
+        <div class="contact-grid">
+            <a href="tel:+917397702121" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-title">Phone</div>
+                <div class="contact-value">+91 7397702121</div>
+            </a>
+
+            <a href="mailto:zaidmohammed35@gmail.com" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-title">Email</div>
+                <div class="contact-value">zaidmohammed35@gmail.com</div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mohammedzaidsp" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="contact-title">LinkedIn</div>
+                <div class="contact-value">mohammedzaidsp</div>
+            </a>
+
+            <a href="https://github.com/mohammedzaidsp" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="contact-title">GitHub</div>
+                <div class="contact-value">mohammedzaidsp</div>
+            </a>
+
+            <a href="https://wa.me/917397702121" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-title">WhatsApp</div>
+                <div class="contact-value">+91 7397702121</div>
+            </a>
+
+            <a href="https://www.instagram.com/mohammedzaidsp/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="contact-title">Instagram</div>
+                <div class="contact-value">mohammedzaidsp</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; <span id="current-year"></span> Mohammed Zaid SP. All rights reserved.</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
     <script src="scripts.js"></script>
-  </body>
+</body>
 </html>
