@@ -1,0 +1,14 @@
+{
+  "name": "mohammed-zaid-portfolio",
+  "version": "1.0.0",
+  "description": "Premium Interactive Developer Portfolio for Mohammed Zaid SP",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
